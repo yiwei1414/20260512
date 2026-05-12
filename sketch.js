@@ -26,6 +26,12 @@ function setup() {
 function draw() {
   background('#e7c6ff');
 
+  // 在全螢幕畫布的上方中央加上文字
+  fill(0); // 設定文字顏色為黑色
+  textSize(32); // 設定文字大小
+  textAlign(CENTER, TOP); // 設定文字水平置中，垂直對齊頂部
+  text("411136541", width / 2, 20); // 在畫布寬度的一半、距離頂部 20 像素的位置繪製文字
+
   // 檢查攝影機是否準備好，避免畫出空畫面
   if (capture.width === 0 || capture.height === 0) return;
 
